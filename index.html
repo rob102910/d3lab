@@ -14,7 +14,7 @@
       var rows = d3.table.selectAll("tr")
         .data(array)
         .enter()
-        .append("td")
+        .append("td");
       
       rows.append("td")
         .text(function(d) {return d.name});
