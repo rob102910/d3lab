@@ -11,6 +11,7 @@
       var dog3 = {name:"Oso", color:"brown", size:"medium"};
       var array =[dog, dog2, dog3];
       var table = d3.select("body").append("table");
+      d3.select("table").append("tr");
       var rows = d3.table.selectAll("tr")
         .data(array)
         .enter()
