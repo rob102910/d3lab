@@ -17,11 +17,11 @@
         .append("td")
       
       rows.append("td")
-        .text(dog);
+        .text(function(d) {return d.contents});
        rows.append("td")
-        .text(dog2);
+        .text(function(d) {return d.contents});
        rows.append("td")
-        .text(dog3);
+        .text(function(d) {return d.contents});
   
     </script>
   </body>
