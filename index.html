@@ -1,1 +1,22 @@
-
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Page Template</title>
+    <script type ="text/javascript" src="d3.js"></script>
+  </head>
+  <body style="background-color:lightcyan;">
+    <script text/javascript>
+      var dog = {name = "Charlie", color="brown", size="big"};
+      var dog2 ={name = "Foster", color="white", size="big"};
+      var dog3 = {name = "Oso", color="brown", size="medium"};
+      var array =[dog, dog2, dog3];
+       d3.select("body").append("table");
+       d3.select("table").append("tr")
+        .data(array)
+        .enter()
+        .append("td")
+        .text(function(d) { return d; });
+  
+    </script>
+  </body>
+  </html>
