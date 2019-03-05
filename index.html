@@ -12,7 +12,7 @@
       var array =[dog, dog2, dog3];
       var table = d3.select("body").append("table");
       
-      var rows = d3.table.selectAll("tr")
+      var rows = d3.select("table").selectAll("tr")
         .data(array)
         .enter()
         .append("tr");
