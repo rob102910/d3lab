@@ -14,10 +14,10 @@ table, th, td {border: 1px solid black;}
     <h1> This website shows our table made using d3</h1>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script text/javascript>
-      var head = {name:"Name", color:"Color", size:"Size"};
-      var dog = {name:"Charlie", color:"brown", size:"big"};
-      var dog2 ={name:"Foster", color:"white", size:"big"};
-      var dog3 = {name:"Oso", color:"brown", size:"medium"};
+      var head = {dog: "", name:"Name", color:"Color", size:"Size"};
+      var dog = {dog: "Dog1", name:"Charlie", color:"brown", size:"big"};
+      var dog2 ={dog: "Dog2", name:"Foster", color:"white", size:"big"};
+      var dog3 = {dog: "Dog3", name:"Oso", color:"brown", size:"medium"};
       var array =[head, dog, dog2, dog3];
       var table = d3.select("body").append("table");
       
@@ -26,6 +26,8 @@ table, th, td {border: 1px solid black;}
         .enter()
         .append("tr");
       
+      rows.append("td")
+        .text(function(d) {return d.dog});
       rows.append("td")
         .text(function(d) {return d.name});
        rows.append("td")
